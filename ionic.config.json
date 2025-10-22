@@ -1,7 +1,16 @@
 {
   "name": "produtoIntegrador",
   "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
+  "capacitor": {}
+},
+"type": "angular",
+"server": {
+  "proxy" : {
+    "/api" : {
+      "target": "https://esp32-mongodb-idev3.onrender.com",
+      "changeOrigin": true,
+      "secure": false
+    }
+  }
+}
 }

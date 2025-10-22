@@ -1,0 +1,7 @@
+{
+  "name": "produtoIntegrador",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -10,4 +10,15 @@
       <ion-title size="large">dashboard</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="dashboard-container">
+  <div class="metric-card" *ngFor="let i of dados">
+    <p class="temperature" [style.--value]="(i.temperatura/50)*100 + '%'">temperatura: {{i.temperatura}}°C</p>
+    <p class="humidity" [style.--value]="i.umidade + '%'">umidade: {{i.umidade}}%</p>
+    <p class="pump-status">status_bomba: {{i.status_bomba}}</p>
+    <p class="ph" [style.--ph-value]="(i.ph/14)*100 + '%'">PH: {{i.ph}}</p>
+    <p class="timestamp">{{i.timestamp}}</p>
+  </div>
+</div>
+
 </ion-content>

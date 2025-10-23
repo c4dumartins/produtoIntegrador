@@ -1,0 +1,70 @@
+.dashboard-container {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    
+    &.temperature {
+      color: #ff6b6b;
+      position: relative;
+      
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: conic-gradient(#ff6b6b var(--value), #f1f1f1 var(--value));
+        margin-right: 10px;
+      }
+    }
+    
+    &.humidity {
+      color: #4dabf7;
+      position: relative;
+      
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: conic-gradient(#4dabf7 var(--value), #f1f1f1 var(--value));
+        margin-right: 10px;
+      }
+    }
+    
+    &.pump-status {
+      color: #40c057;
+      font-weight: bold;
+    }
+    
+    &.ph {
+      color: #845ef7;
+      font-weight: bold;
+    }
+    
+    &.timestamp {
+      color: #868e96;
+      font-size: 0.9em;
+      font-style: italic;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
